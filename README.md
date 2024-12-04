@@ -70,6 +70,9 @@ Plateforme de gestion de tâches collaboratives.
 
 2. Accédez à l'application dans votre navigateur à l'adresse [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+3. Connectez vous en tant qu'admin avec les identifiants suivant : maryse@example.com et password123
+
+4. Jouissez donc des fonctionnalités de l'application.
 ## Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
