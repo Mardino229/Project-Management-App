@@ -1,0 +1,20 @@
+name: Block Push After Deadline
+
+on:
+  push:
+    branches:
+      - '**'  # Surveille toutes les branches
+
+jobs:
+  check-deadline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Deadline
+        run: |
+          # Convertir la date limite en timestamp (GMT+1)
+          deadline=$(date -d "2024-12-04T23:59:00+0100" +%s)
+          now=$(date +%s)
+          if [ "$now" -gt "$deadline" ]; then
+            echo "The deadline has passed. Pushes are not allowed anymore."
+            exit 1
+          fi
