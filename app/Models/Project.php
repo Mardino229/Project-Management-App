@@ -14,7 +14,6 @@ class Project extends Model
         'description',
         'deadline',
         'user_id',
-
     ];
 
     //Relation de 1 à plusieurs

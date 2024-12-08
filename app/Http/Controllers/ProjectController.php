@@ -23,6 +23,29 @@ class ProjectController extends Controller
         }
         return view('projectmanagement',compact('projects','alert'));
     }
+    public function in_progress()
+    {
+        $projects= Project::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', "in_progress");
+
+        return view('projectmanagement',compact('projects'));
+    }
+    public function complete()
+    {
+        $projects= Project::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', "completed");
+
+        return view('projectmanagement',compact('projects'));
+    }
+
+    public function deadline() {
+        $projects = Project::orderBy('deadline', 'asc')->get()->where('user_id', Auth::id());
+        return view('projectmanagement', compact('projects'));
+    }
+    public function search(Request $request) {
+        $request->validate([ 'name' => 'required|string|max:255', ]);
+        $name = $request->input('name');
+        $projects = Project::where('title', 'LIKE', '%' . $name . '%')->get()->where('user_id', Auth::id());
+        return view('projectmanagement',compact('projects', "name"));
+    }
 
     public function store(Request $request)
     {

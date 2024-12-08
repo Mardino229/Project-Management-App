@@ -22,10 +22,17 @@
             @endif
         </div>
     </div>
-    <h5 class="min-h-16 mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{{$title}}</h5>
+    <h5 class="min-h-10 mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{{$title}}</h5>
+    <div class="py-2">
+        <p>Priority :
+            <span class="bg-gray-100 text-gray-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                    {{$priority}}
+            </span>
+        </p>
+    </div>
     <div class="flex justify-between gap-4" >
         <button data-modal-target="{{$title}}" data-modal-toggle="{{$title}}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-            Read more
+            Read
             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
@@ -34,7 +41,7 @@
             <form method="post" action="{{route("task-management.setStatus", ['task' => $task, 'state' => $state=="non_commencé" ? "en_cours" : "terminé"])}}">
                 @csrf
                 <button type="submit" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                    {{$state=="non_commencé"? "Started task" : "Completed task" }}
+                    {{$state=="non_commencé"? "Start task" : "Finish task" }}
                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
@@ -68,8 +75,8 @@
             </div>
             <!-- Modal footer -->
             <div class="flex items-center justify-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-hide="{{$title}}" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Close
+                <button data-modal-hide="{{$title}}" type="button" class="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Ok
                 </button>
             </div>
         </div>

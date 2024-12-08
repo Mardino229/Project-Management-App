@@ -41,65 +41,103 @@
     <section id="features" class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 mx-auto lg:mb-16 text-center ">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conçu pour la gestion de votre projet</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Chez teamsync, nous nous concentrons sur la bonne gestion de vos projets, des tâches liées au projet et des membres de l'équipe pour une meilleure collaboration entre vous.</p>
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conçu pour la gestion de vos projets</h2>
+                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Chez teamsync, nous nous concentrons sur la bonne gestion de vos projets, des tâches liées aux projets et mêmes des projets d'équipe.</p>
             </div>
             <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0,0,256,256">
+                            <defs><linearGradient x1="24.939" y1="6.426" x2="24.939" y2="20.318" gradientUnits="userSpaceOnUse" id="color-1_yobF1TONimeZ_gr1"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient><linearGradient x1="24.939" y1="25.455" x2="24.939" y2="37.658" gradientUnits="userSpaceOnUse" id="color-2_yobF1TONimeZ_gr2"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient><linearGradient x1="24.939" y1="31.965" x2="24.939" y2="39.169" gradientUnits="userSpaceOnUse" id="color-3_yobF1TONimeZ_gr3"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M43.988,17.327l-16.315,7.121c-1.695,0.74 -3.64,0.742 -5.337,0.007l-16.442,-7.126c-1.192,-0.517 -1.192,-2.142 0,-2.658l16.442,-7.126c1.697,-0.736 3.642,-0.733 5.337,0.007l16.315,7.121c1.187,0.518 1.187,2.136 0,2.654z" fill="url(#color-1_yobF1TONimeZ_gr1)"></path><path d="M43.988,23.673l-4.977,-2.173l-11.337,4.948c-1.695,0.74 -3.64,0.742 -5.338,0.007l-11.433,-4.955l-5.009,2.171c-1.192,0.517 -1.192,2.142 0,2.658l16.442,7.126c1.697,0.736 3.642,0.733 5.338,-0.007l16.314,-7.121c1.187,-0.518 1.187,-2.136 0,-2.654z" fill="url(#color-2_yobF1TONimeZ_gr2)"></path><path d="M43.988,32.673l-4.977,-2.173l-11.337,4.948c-1.695,0.74 -3.64,0.742 -5.338,0.007l-11.433,-4.955l-5.009,2.171c-1.192,0.517 -1.192,2.142 0,2.658l16.442,7.126c1.698,0.736 3.643,0.733 5.339,-0.007l16.314,-7.121c1.186,-0.518 1.186,-2.136 -0.001,-2.654z" fill="url(#color-3_yobF1TONimeZ_gr3)"></path></g></g>
+                        </svg>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Authentification and authorization</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Gestion de Projets Simplifiée</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Les utilisateurs s'inscrivent, se connectent, et réinitialisent leur mot
-                        de passe. Deux types d'utilisateur
-                        admin : peut gérer les utilisateurs et leurs projets.
-                        utilisateur : peut uniquement gérer ses projets et tâches.</p>
+                        <span class="font-bold">Création de Projets : </span>
+                        Créez un nombre illimité de projets avec un titre, une description et une date limite.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Suivi de Projets : </span>
+                        Suivez l'avancement de vos projets grâce à des statuts personnalisés : en cours ou terminé.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Planification Flexible : </span>
+                        Ajustez les échéances et mettez à jour les informations à tout moment.
+                    </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0,0,256,256">
+                            <g fill="#1f2937" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M20.5,3c-2.29659,0 -4.1943,1.76662 -4.44922,4h-3.55078c-2.481,0 -4.5,2.019 -4.5,4.5v27c0,2.481 2.019,4.5 4.5,4.5h23c2.481,0 4.5,-2.019 4.5,-4.5v-27c0,-2.481 -2.019,-4.5 -4.5,-4.5h-3.55078c-0.25492,-2.23338 -2.15262,-4 -4.44922,-4zM20.5,6h7c0.8465,0 1.5,0.6535 1.5,1.5c0,0.8465 -0.6535,1.5 -1.5,1.5h-7c-0.8465,0 -1.5,-0.6535 -1.5,-1.5c0,-0.8465 0.6535,-1.5 1.5,-1.5zM28.5,18.03516c0.90725,0 1.81411,0.33023 2.47461,0.99023c0.661,0.66 1.02539,1.53861 1.02539,2.47461c0,0.936 -0.36439,1.81361 -1.02539,2.47461l-8.48047,8.48242c-0.125,0.126 -0.28308,0.21672 -0.45508,0.26172l-4.78516,1.25c-0.085,0.021 -0.16991,0.03125 -0.25391,0.03125c-0.262,0 -0.51703,-0.10297 -0.70703,-0.29297c-0.251,-0.251 -0.35072,-0.61694 -0.26172,-0.96094l1.25,-4.7832c0.045,-0.172 0.13572,-0.32908 0.26172,-0.45508l8.48242,-8.48242c0.6605,-0.66 1.56736,-0.99023 2.47461,-0.99023z"></path></g></g>
+                        </svg>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Gestion des projets</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Organisation et Suivi des Tâches</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Un utilisateur peut créer un ou plusieurs projets. Chaque projet contient un titre, une description, et une date limite.
-                        Les projets peuvent être marqués comme "en cours" ou "terminé".</p>
+                        <span class="font-bold">Gestion des Tâches : </span>
+                        Associez plusieurs tâches à un projet. Chaque tâche comprend un titre, une description, un statut (non commencé, en cours, terminé), et une priorité.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Tableau des Priorités : </span>
+                        Classez vos tâches par priorité pour mieux vous concentrer sur ce qui compte le plus.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Mises à Jour en Temps Réel : </span>
+                        Modifiez l’état d’une tâche instantanément et suivez les progrès de votre équipe.
+                    </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path><path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path></svg>
+                        <img class="h-8 w-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACc0lEQVR4nO1YS2sUQRBuTBT1H0SyXUMgmaq9zk7VxoOTg+jFHIIEf44iCB58gSdPesoPyHr3JIIsKgTEJ3jQgDdBWRHykJ5sGBV3tnseOzNkP6jLst31fdXVVdWj1BRHBC3/7BkgeayJfwLJvq2pusCQdyEO9RPAg4YLkP2JCgAHJ8O87mkM5hopABLrNVwADya131gUHbGMAjYbKoAHhnzanapawMeW313NTK6Kup1EVq4BRCdLJW9gKkrBAnp6sbOgJjy79FxPQjUJLb+7avK5sQIM5ue7p0xeH06ZqqnQi52FjJ14D0i2NckjWFpGVVfY3B9tThHDNVVHuDQxz+/4qm5wqWSa+GEpJOaC4DQQXwfkD0C8U+Io8aUU8prkWUGjxDjbLVxAHPl8nXi30oYIcdrkErBdrQD6f87bOo7rfLUCxOby7Yxcv7SMLt+EVBUCNPK71D0wXLMVoSoScHXcPqZJHaQTfx6OEXURwE/NYKfqChiR84D83kS+1uSnSHAMfFnRJHeBpB+P0Si/hj2ir0nueNiNzP9U0Wi32yc8kiuaZEOTvAGUH5rkG5Bsxb9heElF0eyo9Z4fXtQoLy2LwQsP+UJh5LUvl/99Oo5w/MkQ/Xv1+gwQ33RpYpDYgyAIjuegvj6jiW85Ot0za+LlUTSb9esGJIViM+1k0yPvTv6P05AbQHI/H3k5MOR7WdMmj+N+IeRpGBDqnne6sDY5n5pGyK8LFYDyyro6mWqT05lVtQFH8yg8Z5c+JBu5HCE/KUOAJr5tK+BtTkeFpg8cGspzKwGA/D1fCvHXUgSQ5WO/AEdWrzfIsK+VgCmmOEL4Dc8xF9/UACjYAAAAAElFTkSuQmCC" alt="collaboration">
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Gestion des tâches</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Collaboration Intuitive</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Les tâches sont associées à un projet.
-                        Une tâche contient un titre, une description, un statut (non commencé, en
-                        cours, terminé), et une priorité.
-                        Les utilisateurs peuvent assigner des tâches à d'autres utilisateurs.</p>
+                        <span class="font-bold">Attribution des Tâches : </span>
+                        Assignez des tâches spécifiques à différents utilisateurs pour une gestion claire des responsabilités.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Communication Facile : </span>
+                        Discutez et échangez des informations directement dans chaque tâche pour éviter les malentendus.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Suivi Collaboratif : </span>
+                        Gardez une vue d’ensemble des contributions de chaque membre de l’équipe.
+                    </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <img class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" src="data:image/png;base64,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" alt="control-panel">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABfUlEQVR4nO2VwUrDQBCGow/gUaF2d1IMyey2CEV3NjdBi1cRVBB8AxF6lOJFixdF38WLryB4kHryAbz4FFVW2tJqkm5I0qB0YQhkJv//zc6GdZx/uhZdqc6WG9srpZiDCF9B6E+G+qU0czDhU3u25qh6Q3MWqMtcxauSTiuofJvOeV1fFNYZoOrVGno9Ok/5dw7jMx0F9bnQT76/hRP5gDrFmQfU4b4+AaE+fgNNmrvNJriC3gD1e1Rw1M+eR0vJ5gnbWgvo4FssJg+obyIhxwPVvnXncYVMbOy5SLs/33Oh7qcBcEmH0aIYPmadaSYAwPABhO5nOVCZAJJWZW2TMaSuMYgKJujK1BQGwJC604QNRGEA3EZ4sBtzAPhTI2B1ak89XEhtWwCQ6jYVAM+zM0F3TKij2QPg4Cnp2IinG4FU53nONjUAt/nAAEh9XR6AtBeeA/D5CGTZh1CELYu/amcEsOpRdWgQF6bGts5xnAUDEVsnwpapSX0ZFbG+AJmsHGr+IBYHAAAAAElFTkSuQmCC" alt="external-graph-ui-basic-anggara-flat-anggara-putra">
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Tableau de bord</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Analyse et Reporting</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Une vue regroupant tous les projets et tâches d’un utilisateur avec des
-                        statistiques (nombre de tâches en cours, terminées, etc.).</p>
+                        <span class="font-bold">Tableaux de Bord Dynamiques : </span>
+                        Visualisez les progrès de vos projets et tâches grâce à travers des statistiques.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Rapports Automatiques : </span>
+                        Exportez des rapports détaillés pour analyser les performances et identifier les points d’amélioration.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Notifications Personnalisées : </span>
+                        Restez informé des échéances et des mises à jour importantes.
+                    </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                        <img class="h-9 w-9" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEBklEQVR4nO1aS2sUQRCek4+DogcVdLd7E1amanzkoFu1CYIX8QGKXgQTQf0DYvBgPBm9iCYmKAriRcFfIBpf+AdEPIgYTaIgaLyIiseoMUrNrstkdnZ2Z7o3LyxoWGZ7qvvr+qq6qnsc578sUFGbtq3USAc0cL8Cuq+QRzTQNwX8Q5r/G+mN/Cd9ckj7dVvbCmcuSD6/e7HyiocV8mONNKmR/yRrNKmAHmq30CW6nJmWTKa4VAOf1Eifkk++JqhxDdSt9fYlMwJCI+/RQO/sAQg1oLc5t7CraQDE9BroStMAVAHi22J5qyBaNvIajfx8xkBgBcyz1s3tq62A0C7nxNxJJ+FHK6RTWbdjrTQF3ONHr8R6aEzmYG6JFCDKQHrC+uRZOl00ltoyEj1M6CRWCOuUZyY0y6cJ0Qr4ugm/o4Bk1hfXGfrN1eQh1tBRo6ilgU+b6s0B7Uyw2ZnvE+XUpMfU2XWEvzREsdKObTZYs1sW+UT9TS8m7SiH1AGFfF4Dv7I+SeBXolshDyrgnzH9PsZaRRLAWLMiDUzvT54C6jUCJZMH6hVdTlA38mD8e9RZG4ifxcYNTBdqL0IF1HADkx+OmnxQNHBfHV954MTUE7GpuEKaUEBnWr0tymmStHpblA8SaaKORX7l87S8SoFfFCWjxXNxunx+2yrTyUuBlQU6ooGeaOTfjc5BQWFvlTKFdCkNx0tW4jvKo4NJagnpK+/479ZbfaxJ0b4Ii/BQaoetgOLvCuhmPRDSR/qajqeR70UpH7Og2G91rWFpHIU8Uq0c6Ov8A0KfIyxinj7MApCJhQtELxhqIY/OQyBvqoHICeA8A6KR7lYrB+63tErvg3qzWNhQnRDSeytAgC/aSFGigYQ2RI18TnKnEJBbdsYq7I3Md9Kd34aay8dClh6WVH3aM5ePmYPgn5FJY2ml+JHpADls1//0ZWDrxsrAAXpJhmvBIkORIEorVeiy6R8a+WyAcr1W/QT4UL1Sd9yafwSKrHCoNPIT4I+e5y2qCaQ0OHWnphUUjgajVRXQAL2kb+oF84rHY0H8s4p/22ToHxKtIvqcNfUT1ehxkL9abmGXsX9E1e7Aw4Z+MqWwuKMhEIEVvZbWP4LRKtyEcqn9BOiyk+5ih5+lOSINRqs4eiU5QlVAT+s6eC2Ro/xGK0cF/EJ43+IVKTaTBvqacYubSj5CLxujLY8aH3LIJYvNMji57/FoMIgYiVgmCc2sgQB6auO4qdZl6NQMAbnR1Lt3uZ9oJtUU8kjiEJtWZKXklFFSBXs04g+yY8/KFxBlunWWvi+hX4kBlN4ZkgQwdWi1LVIbZN3ivvIp+j1JEjXyl8pHNf5vei3lqVR2UhS5bscy6xP5L87ckL/U/2v8xDe6VgAAAABJRU5ErkJggg==" alt="accessibility2">
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Notifications</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Accessibilité et Sécurité</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Les utilisateurs reçoivent une notification lorsqu’une tâche leur est assignée.</p>
-                </div>
-                <div>
-                    <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-                        <svg class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Operations</h3>
+                        <span class="font-bold">Interface Intuitive : </span>
+                        Profitez d’une interface utilisateur simple et épurée, accessible sur tous vos appareils.
+                    </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        Gérez votre profil utilisateur incluant la suppression de votre compte.</p>
+                        <span class="font-bold">Gestion des Permissions : </span>
+                        Contrôlez les niveaux d'accès de chaque utilisateur pour garantir la sécurité des données.
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400">
+                        <span class="font-bold">Sauvegardes Automatiques : </span>
+                        Protégez vos informations grâce à des sauvegardes régulières.
+                    </p>
                 </div>
             </div>
         </div>
@@ -125,7 +163,7 @@
                         </h3>
                         <span class="text-gray-500 dark:text-gray-400">FullStack Web & Mobile developer</span>
                         <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            J'ai réalisé la partie vue du projet ainsi que le tableau de bord côté logique et les fonctionnalités de l'administrateur.
+                            Développeur passionné, spécialisé en développement web, mobile, technologies backend et conception logicielle, en quête de nouveaux défis.
                         </p>
                         <ul class="flex space-x-4 sm:mt-0">
                             <li>

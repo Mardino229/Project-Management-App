@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\NotificationMail;
 use App\Models\Notification;
+use App\Models\Project;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -26,6 +27,23 @@ class TaskController extends Controller
         }
 
         return view('task.all',compact('tasks', 'alert'));
+    }
+
+    public function priority() {
+        $tasks = Task::orderByRaw("FIELD(priority, 'high', 'medium', 'low')")->get()->where('user_id', Auth::id());
+        return view('task.all', compact('tasks'));
+    }
+    public function status() {
+        $tasks = Task::orderByRaw("FIELD(status, 'non_commencé', 'en_cours', 'terminé')")->get()->where('user_id', Auth::id());
+        return view('task.all', compact('tasks'));
+    }
+
+    public function search(Request $request) {
+        $request->validate([ 'name' => 'required|string|max:255', ]);
+        $name = $request->input('name');
+
+        $tasks = Task::where('title', 'LIKE', '%' . $name . '%')->get()->where('user_id', Auth::id());
+        return view('task.all',compact('tasks', "name"));
     }
 
     public function not_stated()
@@ -119,7 +137,11 @@ class TaskController extends Controller
         ]);
 
         $task = Task::create($request->all());
-
+        $project = Project::find($id);
+        if ($project->status = "completed") {
+            $project->status = "in_progress";
+            $project->save();
+        }
         return redirect()->back()->with('success','Task created and added to project '.$task->project->title .' with success');
     }
 

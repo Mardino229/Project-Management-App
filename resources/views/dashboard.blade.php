@@ -52,7 +52,7 @@
                         </div>
                         <div class="block w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                             <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
-                            <p class="font-normal  text-gray-700 dark:text-gray-400">Global view of project</p>
+                            <p class="font-normal  text-gray-700 dark:text-gray-400">Global view of projects</p>
                             @if(empty($projectsDetails))
                                 <p class="text-center text-black"> < Aucun projet à votre actif /> </p>
                             @endif
@@ -62,7 +62,7 @@
                                         <div class="flex justify-between items-center mb-2">
                                             <h3 class="font-semibold">{{$details->title}}</h3>
                                             <div class="font-bold">
-                                                {{$details->completed}}/{{$details->total}} tasks
+                                                {{$details->completed}}/{{$details->total}} tasks completed
                                             </div>
                                         </div>
                                         <div class="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">

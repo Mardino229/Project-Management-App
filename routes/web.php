@@ -23,6 +23,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 //    Route::resource('tasks', ProjectController::class);
 
     Route::get('/project-management', [ProjectController::class, 'index'])->name('project-management');
+    Route::post('/project-management', [ProjectController::class, 'search'])->name('project-search');
+    Route::get('/project-management-deadline', [ProjectController::class, 'deadline'])->name('project-deadline');
+    Route::get('/project-management/in_progress', [ProjectController::class, 'in_progress'])->name('project-in_progress');
+    Route::get('/project-management/completed', [ProjectController::class, 'complete'])->name('project-completed');
     Route::post('/project-create', [ProjectController::class, 'store'])->name('project-management.store');
     Route::post('/project-edit/{project}', [ProjectController::class, 'update'])->name('project-management.update');
     Route::post('/project-to-complete/{project}', [ProjectController::class, 'completed'])->name('project-management.complete');
@@ -35,6 +39,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     Route::get('/task-management', [TaskController::class, 'index'])->name('task-management');
+    Route::get('/task-management-priority', [TaskController::class, 'priority'])->name('task-priority');
+    Route::get('/task-management-status', [TaskController::class, 'status'])->name('task-status');
+    Route::post('/task-management', [TaskController::class, 'search'])->name('task-search');
     Route::get('/task-management/not-started', [TaskController::class, 'not_stated'])->name("not-started");
     Route::get('/task-management/in-progress', [TaskController::class, 'in_progress'])->name("in-progress");
     Route::get('/task-management/completed', [TaskController::class, 'completed'])->name("completed");

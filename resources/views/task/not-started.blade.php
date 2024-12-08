@@ -2,7 +2,7 @@
 
 @section("content")
         @foreach($tasks as $task)
-            <x-task :task="$task" :title="$task->title" :description="$task->description" :state="$task->status" :project="$task->project->title" >
+            <x-task :task="$task" :priority="$task->priority"  :title="$task->title" :description="$task->description" :state="$task->status" :project="$task->project->title" >
 
             </x-task>
         @endforeach

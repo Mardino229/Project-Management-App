@@ -67,6 +67,6 @@ class ProjectDetails
         $this->in_progress = $in_progress;
         $this->completed = $completed;
         $this->total = $total;
-        $this->percentage = $percentage;
+        $this->percentage = round($percentage, 2);
     }
 }
