@@ -1,0 +1,34 @@
+name: "CI-CD Workflow"
+on: [push]
+
+jobs:
+    # Copy the repository to the directory on the server/VPS used for the application
+  deploy:
+    runs-on: ubuntu-latest    
+    steps:
+    - name: Copy dist to VPS
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        # Selecting all folders 
+        source: "."
+        # The path is based on the directory where the user logged into the server starts
+        target: "~/"
+    - name: Install and start
+      uses: appleboy/ssh-action@v1.2.0
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+            cd ~/Project-Management-App
+            npm install
+            cp .env.example .env
+            php artisan key:generate
+            php artisan db:seed
+            npm run dev
+            php artisan serve
+  
+        
