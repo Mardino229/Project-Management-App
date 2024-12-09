@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Copy dist to VPS
-      uses: appleboy/scp-action@v1.2.0
+      uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
