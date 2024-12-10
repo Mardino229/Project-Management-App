@@ -1,6 +1,6 @@
 # Teamsync
 
-Plateforme de gestion de tâches collaboratives.
+Plateforme de gestion de tâches collaboratives
 
 ## Prérequis
 
