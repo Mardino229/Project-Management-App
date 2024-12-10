@@ -19,6 +19,9 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSH_KEY }} 
       with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }} 
         source: "."
         target: "~/Project-Management-App"  
     - name: Install and start application
