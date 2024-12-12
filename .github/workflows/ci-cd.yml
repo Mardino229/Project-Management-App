@@ -37,5 +37,5 @@ jobs:
           cp .env.example .env
           php artisan key:generate
           php artisan db:seed
-          npm run dev
           php artisan serve --host=0.0.0.0 --port=8000
+          npm run dev
