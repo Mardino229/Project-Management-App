@@ -19,6 +19,9 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSH_KEY }} 
       with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }} 
         source: "."
         target: "~/Project-Management-App"  
     - name: Install and start application
@@ -29,9 +32,10 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd ~/Project-Management-App
+          composer install
           npm install
           cp .env.example .env
           php artisan key:generate
           php artisan db:seed
-          npm run dev
           php artisan serve --host=0.0.0.0 --port=8000
+          npm run dev
