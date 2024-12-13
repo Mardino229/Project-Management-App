@@ -11,14 +11,14 @@
                 <div class="p-2 text-gray-900 dark:text-gray-100">
                     <div class="w-full">
                         <div class="block w-full mb-2 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
-                            <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tasks Statistics</h5>
-                            <p class="font-normal   text-gray-700 dark:text-gray-400">Global view of tasks</p>
+                            <h5 class=" md:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white">Tasks Statistics</h5>
+                            <p class="font-normal mb-2 text-gray-700 dark:text-gray-400">Global view of tasks</p>
                             <div class="flex gap-2">
                                 <div class="md:flex w-full  gap-2 mb-6">
                                     <div class="bg-blue-200 md:mb-0 mb-2 w-full  p-4 rounded-lg">
                                         <div class="flex flex-col justify-between mb-2">
                                             <h3 class="font-semibold text-blue-600">In progress</h3>
-                                            <div class="font-bold text-3xl text-blue-600">
+                                            <div class="font-bold md:text-3xl text-xl text-blue-600">
                                                 {{$in_progress}}
                                             </div>
                                         </div>
@@ -26,7 +26,7 @@
                                     <div class="bg-green-200 w-full p-4 rounded-lg">
                                         <div class="flex flex-col text-green-600 justify-between mb-2">
                                             <h3 class="font-semibold">Completed</h3>
-                                            <div class="font-bold text-3xl">
+                                            <div class="font-bold md:text-3xl text-xl">
                                                 {{$completed}}
                                             </div>
                                         </div>
@@ -36,7 +36,7 @@
                                     <div class="bg-red-200 w-full md:mb-0 mb-2  p-4 rounded-lg">
                                         <div class="flex flex-col text-red-600 justify-between mb-2">
                                             <h3 class="font-semibold ">No started</h3>
-                                            <div class="font-bold text-3xl">
+                                            <div class="font-bold md:text-3xl text-xl">
                                                 {{$not_started}}
                                             </div>
                                         </div>
@@ -44,7 +44,7 @@
                                     <div class="bg-gray-200 w-full p-4 rounded-lg">
                                         <div class="flex flex-col text-gray-600 justify-between mb-2">
                                             <h3 class="font-semibold">Total</h3>
-                                            <div class="font-bold text-3xl">
+                                            <div class="font-bold md:text-3xl text-xl">
                                                 {{$total}}
                                             </div>
                                         </div>
@@ -53,8 +53,8 @@
                             </div>
                         </div>
                         <div class="block w-full  p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
-                            <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
-                            <p class="font-normal  text-gray-700 dark:text-gray-400">Global view of projects</p>
+                            <h5 class=" md:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
+                            <p class="font-normal mb-2 text-gray-700 dark:text-gray-400">Global view of projects</p>
                             @if(empty($projectsDetails))
                                 <p class="text-center text-black"> < Aucun projet à votre actif /> </p>
                             @endif
