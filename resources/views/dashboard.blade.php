@@ -8,49 +8,51 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <div class="flex gap-2 lg:flex-nowrap flex-wrap  w-full">
-                        <div class="block w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+                <div class="p-2 text-gray-900 dark:text-gray-100">
+                    <div class="w-full">
+                        <div class="block w-full mb-2 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                             <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tasks Statistics</h5>
-                            <p class="font-normal  text-gray-700 dark:text-gray-400">Global view of tasks</p>
-                            <div class="flex w-full gap-2 mb-6">
-                                <div class="bg-blue-200 w-full  p-4 rounded-lg">
-                                    <div class="flex flex-col justify-between mb-2">
-                                        <h3 class="font-semibold text-blue-600">In progress</h3>
-                                        <div class="font-bold text-3xl text-blue-600">
-                                            {{$in_progress}}
+                            <p class="font-normal   text-gray-700 dark:text-gray-400">Global view of tasks</p>
+                            <div class="flex gap-2">
+                                <div class="md:flex w-full  gap-2 mb-6">
+                                    <div class="bg-blue-200 md:mb-0 mb-2 w-full  p-4 rounded-lg">
+                                        <div class="flex flex-col justify-between mb-2">
+                                            <h3 class="font-semibold text-blue-600">In progress</h3>
+                                            <div class="font-bold text-3xl text-blue-600">
+                                                {{$in_progress}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-green-200 w-full p-4 rounded-lg">
+                                        <div class="flex flex-col text-green-600 justify-between mb-2">
+                                            <h3 class="font-semibold">Completed</h3>
+                                            <div class="font-bold text-3xl">
+                                                {{$completed}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bg-green-200 w-full p-4 rounded-lg">
-                                    <div class="flex flex-col text-green-600 justify-between mb-2">
-                                        <h3 class="font-semibold">Completed</h3>
-                                        <div class="font-bold text-3xl">
-                                            {{$completed}}
+                                <div class="md:flex w-full  gap-2 mb-6">
+                                    <div class="bg-red-200 w-full md:mb-0 mb-2  p-4 rounded-lg">
+                                        <div class="flex flex-col text-red-600 justify-between mb-2">
+                                            <h3 class="font-semibold ">No started</h3>
+                                            <div class="font-bold text-3xl">
+                                                {{$not_started}}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="flex w-full gap-2">
-                                <div class="bg-red-200 w-full  p-4 rounded-lg">
-                                    <div class="flex flex-col text-red-600 justify-between mb-2">
-                                        <h3 class="font-semibold ">No started</h3>
-                                        <div class="font-bold text-3xl">
-                                            {{$not_started}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bg-gray-200 w-full p-4 rounded-lg">
-                                    <div class="flex flex-col text-gray-600 justify-between mb-2">
-                                        <h3 class="font-semibold">Total</h3>
-                                        <div class="font-bold text-3xl">
-                                            {{$total}}
+                                    <div class="bg-gray-200 w-full p-4 rounded-lg">
+                                        <div class="flex flex-col text-gray-600 justify-between mb-2">
+                                            <h3 class="font-semibold">Total</h3>
+                                            <div class="font-bold text-3xl">
+                                                {{$total}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="block w-full  p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+                        <div class="block w-full  p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                             <h5 class=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
                             <p class="font-normal  text-gray-700 dark:text-gray-400">Global view of projects</p>
                             @if(empty($projectsDetails))
@@ -58,17 +60,67 @@
                             @endif
                             <div class="flex flex-col gap-2">
                                 @foreach($projectsDetails as $details)
-                                    <div class="bg-gray-100  p-4 rounded-lg">
-                                        <div class="flex justify-between items-center mb-2">
-                                            <h3 class="font-semibold">{{$details->title}}</h3>
-                                            <div class="font-bold">
-                                                {{$details->completed}}/{{$details->total}} tasks completed
+                                    <div class="flex md:flex-nowrap flex-wrap">
+                                        <div class="w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+                                            <div class="flex justify-between mb-3">
+                                                <div class="flex items-center">
+                                                    <div class="flex justify-center items-center">
+                                                        <h3 class="font-semibold">{{$details->title}}</h3>
+                                                        <div data-popover id="chart-info" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
+                                                            <div class="p-3 space-y-2">
+                                                                <h3 class="font-semibold text-gray-900 dark:text-white">Activity growth - Incremental</h3>
+                                                                <p>Report helps navigate cumulative growth of community activities. Ideally, the chart should have a growing trend, as stagnating chart signifies a significant decrease of community activity.</p>
+                                                                <h3 class="font-semibold text-gray-900 dark:text-white">Calculation</h3>
+                                                                <p>For each date bucket, the all-time volume of activities is calculated. This means that activities in period n contain all activities up to period n, plus the activities generated by your community in period.</p>
+                                                                <a href="#" class="flex items-center font-medium text-blue-600 dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:underline">Read more <svg class="w-2 h-2 ms-1.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                                                    </svg></a>
+                                                            </div>
+                                                            <div data-popper-arrow></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+                                                <div class="grid grid-cols-3 gap-3 mb-2">
+                                                    <dl class="bg-orange-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                                                        <dt class="w-8 h-8 rounded-full bg-orange-100 dark:bg-gray-500 text-orange-600 dark:text-orange-300 text-sm font-medium flex items-center justify-center mb-1">{{$details->not_started}}</dt>
+                                                        <dd class="text-orange-600 dark:text-orange-300 text-sm font-medium">To do</dd>
+                                                    </dl>
+                                                    <dl class="bg-teal-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                                                        <dt class="w-8 h-8 rounded-full bg-teal-100 dark:bg-gray-500 text-teal-600 dark:text-teal-300 text-sm font-medium flex items-center justify-center mb-1">{{$details->in_progress}}</dt>
+                                                        <dd class="text-teal-600 dark:text-teal-300 text-sm font-medium">In progress</dd>
+                                                    </dl>
+                                                    <dl class="bg-blue-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
+                                                        <dt class="w-8 h-8 rounded-full bg-blue-100 dark:bg-gray-500 text-blue-600 dark:text-blue-300 text-sm font-medium flex items-center justify-center mb-1">{{$details->completed}}</dt>
+                                                        <dd class="text-blue-600 dark:text-blue-300 text-sm font-medium">Done</dd>
+                                                    </dl>
+                                                </div>
+                                                <button data-collapse-toggle="{{$details->title}}more-details" type="button" class="hover:underline text-xs text-gray-500 dark:text-gray-400 font-medium inline-flex items-center">Show more details <svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                                    </svg>
+                                                </button>
+                                                <div id="{{$details->title}}more-details" class="border-gray-200 border-t dark:border-gray-600 pt-3 mt-3 space-y-2 hidden">
+                                                    <dl class="flex items-center justify-between">
+                                                        <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal">Days until deadline:</dt>
+                                                        <dd class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-gray-600 dark:text-gray-300">
+                                                            {{$details->days}} days</dd>
+                                                    </dl>
+                                                </div>
+                                            </div>
+                                            <div class="bg-gray-100 w-full  p-4 rounded-lg">
+                                                <div class="flex justify-between items-center mb-2">
+                                                    <h3 class="font-semibold">Progress bar</h3>
+                                                    <div class="font-semibold">
+                                                        {{$details->completed}}/{{$details->total}} completed
+                                                    </div>
+                                                </div>
+                                                <div class="w-full md:h-4 h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+                                                    <div class="md:h-4 h-2 bg-blue-600 rounded-full dark:bg-blue-500" style="width: {{$details->percentage}}%"></div>
+                                                </div>
+                                                <p class="text-sm  text-gray-500 mt-2">{{$details->percentage}}% completed</p>
                                             </div>
                                         </div>
-                                        <div class="w-full h-6 bg-gray-200 rounded-full dark:bg-gray-700">
-                                            <div class="h-6 bg-blue-600 rounded-full dark:bg-blue-500" style="width: {{$details->percentage}}%"></div>
-                                        </div>
-                                        <p class="text-sm text-gray-500 mt-2">{{$details->percentage}}% completed</p>
                                     </div>
                                 @endforeach
                             </div>

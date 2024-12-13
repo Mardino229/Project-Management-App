@@ -1,32 +1,32 @@
 
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex justify-between">
-            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <div class="flex justify-between mb-1">
+            <h2 class="hidden md:flex font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('My Tasks') }}
             </h2>
-            <div class="flex items-center gap-2 justify-end">
+            <div class="flex w-full md:w-auto items-center gap-2 justify-end">
                 <button type="button" data-popover-target="search" >
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256">
                         <g fill="#1f2937" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M19,3c-5.51172,0 -10,4.48828 -10,10c0,2.39453 0.83984,4.58984 2.25,6.3125l-7.96875,7.96875l1.4375,1.4375l7.96875,-7.96875c1.72266,1.41016 3.91797,2.25 6.3125,2.25c5.51172,0 10,-4.48828 10,-10c0,-5.51172 -4.48828,-10 -10,-10zM19,5c4.42969,0 8,3.57031 8,8c0,4.42969 -3.57031,8 -8,8c-4.42969,0 -8,-3.57031 -8,-8c0,-4.42969 3.57031,-8 8,-8z"></path></g></g>
                     </svg>
                 </button>
                 <button type="button" class="inline-flex items-center px-2 py-1 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150" data-popover-target="sort" >
-                    <svg class="w-6 h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-5 h-5 md:w-6 md:h-6  text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20V10m0 10-3-3m3 3 3-3m5-13v10m0-10 3 3m-3-3-3 3"/>
                     </svg>
                 </button>
             </div>
         </div>
-        <div class="flex gap-2 justify-end">
-            <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+        <div class="flex gap-2 md:justify-end justify-center">
+            <div class="text-sm font-medium text-center text-gray-500 dark:text-gray-400 dark:border-gray-700">
                 <ul class="flex flex-wrap -mb-px">
-                    <li class="me-2 pb-4">
+                    <li class="me-2">
                         <x-nav-link :href="route('task-management')" :active="request()->routeIs('task-management')">
                             {{ __('All') }}
                         </x-nav-link>
                     </li>
-                    <li class="me-2 pb-4">
+                    <li class="me-2">
                         <x-nav-link :href="route('not-started')" :active="request()->routeIs('not-started')">
                             {{ __('Not started') }}
                         </x-nav-link>
@@ -48,7 +48,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="w-full gap-4 p-6  text-gray-900 dark:text-gray-100">
+                <div class="w-full gap-4 md:p-6 p-1  text-gray-900 dark:text-gray-100">
                     @if(isset($name))
                         <p class="text-center font-bold text-gray-600 mb-2">Result found for "{{$name}}"</p>
                     @endif

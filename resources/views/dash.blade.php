@@ -41,17 +41,19 @@
     <section id="features" class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 mx-auto lg:mb-16 text-center ">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conçu pour la gestion de vos projets</h2>
+                <h2 class="mb-4 text-3xl  md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conçu pour la gestion de vos projets</h2>
                 <p class="text-gray-500 sm:text-xl dark:text-gray-400">Chez teamsync, nous nous concentrons sur la bonne gestion de vos projets, des tâches liées aux projets et mêmes des projets d'équipe.</p>
             </div>
-            <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            <div class="space-y-8 md:text-center md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0,0,256,256">
                             <defs><linearGradient x1="24.939" y1="6.426" x2="24.939" y2="20.318" gradientUnits="userSpaceOnUse" id="color-1_yobF1TONimeZ_gr1"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient><linearGradient x1="24.939" y1="25.455" x2="24.939" y2="37.658" gradientUnits="userSpaceOnUse" id="color-2_yobF1TONimeZ_gr2"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient><linearGradient x1="24.939" y1="31.965" x2="24.939" y2="39.169" gradientUnits="userSpaceOnUse" id="color-3_yobF1TONimeZ_gr3"><stop offset="0" stop-color="#1f2937"></stop><stop offset="1" stop-color="#1f2937"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M43.988,17.327l-16.315,7.121c-1.695,0.74 -3.64,0.742 -5.337,0.007l-16.442,-7.126c-1.192,-0.517 -1.192,-2.142 0,-2.658l16.442,-7.126c1.697,-0.736 3.642,-0.733 5.337,0.007l16.315,7.121c1.187,0.518 1.187,2.136 0,2.654z" fill="url(#color-1_yobF1TONimeZ_gr1)"></path><path d="M43.988,23.673l-4.977,-2.173l-11.337,4.948c-1.695,0.74 -3.64,0.742 -5.338,0.007l-11.433,-4.955l-5.009,2.171c-1.192,0.517 -1.192,2.142 0,2.658l16.442,7.126c1.697,0.736 3.642,0.733 5.338,-0.007l16.314,-7.121c1.187,-0.518 1.187,-2.136 0,-2.654z" fill="url(#color-2_yobF1TONimeZ_gr2)"></path><path d="M43.988,32.673l-4.977,-2.173l-11.337,4.948c-1.695,0.74 -3.64,0.742 -5.338,0.007l-11.433,-4.955l-5.009,2.171c-1.192,0.517 -1.192,2.142 0,2.658l16.442,7.126c1.698,0.736 3.643,0.733 5.339,-0.007l16.314,-7.121c1.186,-0.518 1.186,-2.136 -0.001,-2.654z" fill="url(#color-3_yobF1TONimeZ_gr3)"></path></g></g>
                         </svg>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Gestion de Projets Simplifiée</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">
+                        Gestion de Projets Simplifiée
+                    </h3>
                     <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-bold">Création de Projets : </span>
                         Créez un nombre illimité de projets avec un titre, une description et une date limite.
@@ -95,10 +97,6 @@
                         Assignez des tâches spécifiques à différents utilisateurs pour une gestion claire des responsabilités.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Communication Facile : </span>
-                        Discutez et échangez des informations directement dans chaque tâche pour éviter les malentendus.
-                    </p>
-                    <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-bold">Suivi Collaboratif : </span>
                         Gardez une vue d’ensemble des contributions de chaque membre de l’équipe.
                     </p>
@@ -111,10 +109,6 @@
                     <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-bold">Tableaux de Bord Dynamiques : </span>
                         Visualisez les progrès de vos projets et tâches grâce à travers des statistiques.
-                    </p>
-                    <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Rapports Automatiques : </span>
-                        Exportez des rapports détaillés pour analyser les performances et identifier les points d’amélioration.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-bold">Notifications Personnalisées : </span>
@@ -133,10 +127,6 @@
                     <p class="text-gray-500 dark:text-gray-400">
                         <span class="font-bold">Gestion des Permissions : </span>
                         Contrôlez les niveaux d'accès de chaque utilisateur pour garantir la sécurité des données.
-                    </p>
-                    <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Sauvegardes Automatiques : </span>
-                        Protégez vos informations grâce à des sauvegardes régulières.
                     </p>
                 </div>
             </div>
@@ -195,7 +185,7 @@
                         </h3>
                         <span class="text-gray-500 dark:text-gray-400">FullStack developer</span>
                         <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Je travaille essentiellement sur la partie logique du projet en tant que crud et fonctionnalités utilisateur.
+                           Developpeur web, passionné du domaine de d'informatique et du droit. En formation actuellement en troisième année à l'IFRI.
                         </p>
                         <ul class="flex space-x-4 sm:mt-0">
                             <li>
@@ -215,14 +205,12 @@
         </div>
     </section>
 
-
-
     <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-            <div class="sm:flex sm:items-center sm:justify-between">
+            <div class="flex items-center justify-between">
                 <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                     <x-application-logo class="w-10 h-10 fill-current text-gray-500" />
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Teamsync</span>
+                    <span class="hidden md:flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Teamsync</span>
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
@@ -240,7 +228,7 @@
                 </ul>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Teamsync™</a>. Tous droits réservés.</span>
+            <span class="block text-sm text-gray-500 text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Teamsync™</a>. Tous droits réservés.</span>
         </div>
     </footer>
 
