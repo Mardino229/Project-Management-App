@@ -11,21 +11,21 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
-      
+
     - name: Copy dist to VPS
       uses: appleboy/scp-action@v0.1.7
       env:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.SSH_KEY }} 
+        KEY: ${{ secrets.SSH_KEY }}
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_KEY }} 
+        key: ${{ secrets.SSH_KEY }}
         source: "."
-        target: "~/Project-Management-App"  
+        target: "~/Project-Management-App"
     - name: Install and start application
-      uses: appleboy/ssh-action@v1.2.0  
+      uses: appleboy/ssh-action@v1.2.0
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -34,8 +34,8 @@ jobs:
           cd ~/Project-Management-App
           composer install
           npm install
+          npm run build
           cp .env.example .env
           php artisan key:generate
           php artisan db:seed
           php artisan serve --host=0.0.0.0 --port=8000
-          npm run dev
