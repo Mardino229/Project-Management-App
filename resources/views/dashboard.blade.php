@@ -36,7 +36,7 @@
                                 <div class="md:flex w-full  gap-2 mb-6">
                                     <div class="bg-red-200 w-full md:mb-0 mb-2  p-4 rounded-lg">
                                         <div class="flex flex-col text-red-600 justify-between mb-2">
-                                            <h3 class="font-semibold ">No started</h3>
+                                            <h3 class="font-semibold ">Not started</h3>
                                             <div class="font-bold md:text-3xl text-xl">
                                                 {{$not_started}}
                                             </div>

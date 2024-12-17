@@ -2,26 +2,30 @@
     <section id="about" class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-6 lg:py-16">
             <a href="#features" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-                <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">Nouveau</span> <span class="text-sm font-medium">teamsync est sorti! Voir ce qui est nouveau</span>
-                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">News</span> <span class="text-sm font-medium">TeamSync is coming soon with new features !</span>
+
+{{--                <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>--}}
+{{--            --}}
             </a>
             <div class="flex justify-center items-center">
                 <a href="/" >
                     <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div>
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Gérez vos projets et tâches en toute simplicité</h1>
+            <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+                Manage your projects and tasks with ease</h1>
             <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-                Teamsync est l'outil sur mesure pour gérer vos projets et tâches quotidiens. Il dispose d'une interface utilisateur intuitive et de fonctionnalités adaptées à vos projets, qu'ils soient personnels ou en équipe.</p>
+                Teamsync is the tailor-made tool to manage your daily projects and tasks. It has an intuitive user interface and features to suit your projects, whether personal or team.
+            </p>
             <div class="flex flex-col mb-4 lg:py-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                 <button type="button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                    Se connecter
+                    Sign in
                     <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
                 </button>
                 <button type="button" data-modal-target="authentication-signup-modal" data-modal-toggle="authentication-signup-modal"  class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                    S'inscrire
+                    Sign up
                 </button>
             </div>
             <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
@@ -41,8 +45,9 @@
     <section id="features" class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
             <div class="max-w-screen-md mb-8 mx-auto lg:mb-16 text-center ">
-                <h2 class="mb-4 text-3xl  md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Conçu pour la gestion de vos projets</h2>
-                <p class="text-gray-500 sm:text-xl dark:text-gray-400">Chez teamsync, nous nous concentrons sur la bonne gestion de vos projets, des tâches liées aux projets et mêmes des projets d'équipe.</p>
+                <h2 class="mb-4 text-3xl  md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for your project managements</h2>
+                <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+                    At teamsync, we focus on the proper management of your projects, project-related tasks, and even team projects.</p>
             </div>
             <div class="space-y-8 md:text-center md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
                 <div>
@@ -52,19 +57,19 @@
                         </svg>
                     </div>
                     <h3 class="mb-2 text-xl font-bold dark:text-white">
-                        Gestion de Projets Simplifiée
+                        Simplified Project Management
                     </h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Création de Projets : </span>
-                        Créez un nombre illimité de projets avec un titre, une description et une date limite.
+                        <span class="font-bold">Create Projects : </span>
+                        Create an unlimited number of projects with a title, description, and deadline.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Suivi de Projets : </span>
-                        Suivez l'avancement de vos projets grâce à des statuts personnalisés : en cours ou terminé.
+                        <span class="font-bold">Project Tracking: </span>
+                        Track the progress of your projects with custom statuses: in progress or completed.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Planification Flexible : </span>
-                        Ajustez les échéances et mettez à jour les informations à tout moment.
+                        <span class="font-bold">Flexible Scheduling: </span>
+                        Adjust deadlines and update information at any time.
                     </p>
                 </div>
                 <div>
@@ -73,60 +78,62 @@
                             <g fill="#1f2937" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M20.5,3c-2.29659,0 -4.1943,1.76662 -4.44922,4h-3.55078c-2.481,0 -4.5,2.019 -4.5,4.5v27c0,2.481 2.019,4.5 4.5,4.5h23c2.481,0 4.5,-2.019 4.5,-4.5v-27c0,-2.481 -2.019,-4.5 -4.5,-4.5h-3.55078c-0.25492,-2.23338 -2.15262,-4 -4.44922,-4zM20.5,6h7c0.8465,0 1.5,0.6535 1.5,1.5c0,0.8465 -0.6535,1.5 -1.5,1.5h-7c-0.8465,0 -1.5,-0.6535 -1.5,-1.5c0,-0.8465 0.6535,-1.5 1.5,-1.5zM28.5,18.03516c0.90725,0 1.81411,0.33023 2.47461,0.99023c0.661,0.66 1.02539,1.53861 1.02539,2.47461c0,0.936 -0.36439,1.81361 -1.02539,2.47461l-8.48047,8.48242c-0.125,0.126 -0.28308,0.21672 -0.45508,0.26172l-4.78516,1.25c-0.085,0.021 -0.16991,0.03125 -0.25391,0.03125c-0.262,0 -0.51703,-0.10297 -0.70703,-0.29297c-0.251,-0.251 -0.35072,-0.61694 -0.26172,-0.96094l1.25,-4.7832c0.045,-0.172 0.13572,-0.32908 0.26172,-0.45508l8.48242,-8.48242c0.6605,-0.66 1.56736,-0.99023 2.47461,-0.99023z"></path></g></g>
                         </svg>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Organisation et Suivi des Tâches</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Organization and Tracking of Tasks</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Gestion des Tâches : </span>
-                        Associez plusieurs tâches à un projet. Chaque tâche comprend un titre, une description, un statut (non commencé, en cours, terminé), et une priorité.
+                        <span class="font-bold">Task Management: </span>
+                        Associate multiple tasks with a project. Each task includes a title, description, status (not started, in progress, completed), and priority.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Tableau des Priorités : </span>
-                        Classez vos tâches par priorité pour mieux vous concentrer sur ce qui compte le plus.
+                        <span class="font-bold">Priority Board: </span>
+                        Prioritize your tasks so you can focus on what matters most.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Mises à Jour en Temps Réel : </span>
-                        Modifiez l’état d’une tâche instantanément et suivez les progrès de votre équipe.
+                        <span class="font-bold">Real-Time Updates: </span>
+                        Change the status of a task instantly and track your team's progress.
+
                     </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <img class="h-8 w-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACc0lEQVR4nO1YS2sUQRBuTBT1H0SyXUMgmaq9zk7VxoOTg+jFHIIEf44iCB58gSdPesoPyHr3JIIsKgTEJ3jQgDdBWRHykJ5sGBV3tnseOzNkP6jLst31fdXVVdWj1BRHBC3/7BkgeayJfwLJvq2pusCQdyEO9RPAg4YLkP2JCgAHJ8O87mkM5hopABLrNVwADya131gUHbGMAjYbKoAHhnzanapawMeW313NTK6Kup1EVq4BRCdLJW9gKkrBAnp6sbOgJjy79FxPQjUJLb+7avK5sQIM5ue7p0xeH06ZqqnQi52FjJ14D0i2NckjWFpGVVfY3B9tThHDNVVHuDQxz+/4qm5wqWSa+GEpJOaC4DQQXwfkD0C8U+Io8aUU8prkWUGjxDjbLVxAHPl8nXi30oYIcdrkErBdrQD6f87bOo7rfLUCxOby7Yxcv7SMLt+EVBUCNPK71D0wXLMVoSoScHXcPqZJHaQTfx6OEXURwE/NYKfqChiR84D83kS+1uSnSHAMfFnRJHeBpB+P0Si/hj2ir0nueNiNzP9U0Wi32yc8kiuaZEOTvAGUH5rkG5Bsxb9heElF0eyo9Z4fXtQoLy2LwQsP+UJh5LUvl/99Oo5w/MkQ/Xv1+gwQ33RpYpDYgyAIjuegvj6jiW85Ot0za+LlUTSb9esGJIViM+1k0yPvTv6P05AbQHI/H3k5MOR7WdMmj+N+IeRpGBDqnne6sDY5n5pGyK8LFYDyyro6mWqT05lVtQFH8yg8Z5c+JBu5HCE/KUOAJr5tK+BtTkeFpg8cGspzKwGA/D1fCvHXUgSQ5WO/AEdWrzfIsK+VgCmmOEL4Dc8xF9/UACjYAAAAAElFTkSuQmCC" alt="collaboration">
                     </div>
+
                     <h3 class="mb-2 text-xl font-bold dark:text-white">Collaboration Intuitive</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Attribution des Tâches : </span>
-                        Assignez des tâches spécifiques à différents utilisateurs pour une gestion claire des responsabilités.
+                        <span class="font-bold">Task Assignment: </span>
+                        Assign specific tasks to different users for clear management of responsibilities.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Suivi Collaboratif : </span>
-                        Gardez une vue d’ensemble des contributions de chaque membre de l’équipe.
+                        <span class="font-bold">Collaborative Tracking: </span>
+                        Keep an overview of each team member's contributions.
                     </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAABfUlEQVR4nO2VwUrDQBCGow/gUaF2d1IMyey2CEV3NjdBi1cRVBB8AxF6lOJFixdF38WLryB4kHryAbz4FFVW2tJqkm5I0qB0YQhkJv//zc6GdZx/uhZdqc6WG9srpZiDCF9B6E+G+qU0czDhU3u25qh6Q3MWqMtcxauSTiuofJvOeV1fFNYZoOrVGno9Ok/5dw7jMx0F9bnQT76/hRP5gDrFmQfU4b4+AaE+fgNNmrvNJriC3gD1e1Rw1M+eR0vJ5gnbWgvo4FssJg+obyIhxwPVvnXncYVMbOy5SLs/33Oh7qcBcEmH0aIYPmadaSYAwPABhO5nOVCZAJJWZW2TMaSuMYgKJujK1BQGwJC604QNRGEA3EZ4sBtzAPhTI2B1ak89XEhtWwCQ6jYVAM+zM0F3TKij2QPg4Cnp2IinG4FU53nONjUAt/nAAEh9XR6AtBeeA/D5CGTZh1CELYu/amcEsOpRdWgQF6bGts5xnAUDEVsnwpapSX0ZFbG+AJmsHGr+IBYHAAAAAElFTkSuQmCC" alt="external-graph-ui-basic-anggara-flat-anggara-putra">
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Analyse et Reporting</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">Analysis</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Tableaux de Bord Dynamiques : </span>
-                        Visualisez les progrès de vos projets et tâches grâce à travers des statistiques.
+                        <span class="font-bold">Dynamic Dashboards: </span>
+                        Visualize the progress of your projects and tasks through statistics.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Notifications Personnalisées : </span>
-                        Restez informé des échéances et des mises à jour importantes.
+                        <span class="font-bold">Personalized Notifications:  </span>
+                        Stay informed about deadlines and important updates.
                     </p>
                 </div>
                 <div>
                     <div class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
                         <img class="h-9 w-9" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEBklEQVR4nO1aS2sUQRCek4+DogcVdLd7E1amanzkoFu1CYIX8QGKXgQTQf0DYvBgPBm9iCYmKAriRcFfIBpf+AdEPIgYTaIgaLyIiseoMUrNrstkdnZ2Z7o3LyxoWGZ7qvvr+qq6qnsc578sUFGbtq3USAc0cL8Cuq+QRzTQNwX8Q5r/G+mN/Cd9ckj7dVvbCmcuSD6/e7HyiocV8mONNKmR/yRrNKmAHmq30CW6nJmWTKa4VAOf1Eifkk++JqhxDdSt9fYlMwJCI+/RQO/sAQg1oLc5t7CraQDE9BroStMAVAHi22J5qyBaNvIajfx8xkBgBcyz1s3tq62A0C7nxNxJJ+FHK6RTWbdjrTQF3ONHr8R6aEzmYG6JFCDKQHrC+uRZOl00ltoyEj1M6CRWCOuUZyY0y6cJ0Qr4ugm/o4Bk1hfXGfrN1eQh1tBRo6ilgU+b6s0B7Uyw2ZnvE+XUpMfU2XWEvzREsdKObTZYs1sW+UT9TS8m7SiH1AGFfF4Dv7I+SeBXolshDyrgnzH9PsZaRRLAWLMiDUzvT54C6jUCJZMH6hVdTlA38mD8e9RZG4ifxcYNTBdqL0IF1HADkx+OmnxQNHBfHV954MTUE7GpuEKaUEBnWr0tymmStHpblA8SaaKORX7l87S8SoFfFCWjxXNxunx+2yrTyUuBlQU6ooGeaOTfjc5BQWFvlTKFdCkNx0tW4jvKo4NJagnpK+/479ZbfaxJ0b4Ii/BQaoetgOLvCuhmPRDSR/qajqeR70UpH7Og2G91rWFpHIU8Uq0c6Ov8A0KfIyxinj7MApCJhQtELxhqIY/OQyBvqoHICeA8A6KR7lYrB+63tErvg3qzWNhQnRDSeytAgC/aSFGigYQ2RI18TnKnEJBbdsYq7I3Md9Kd34aay8dClh6WVH3aM5ePmYPgn5FJY2ml+JHpADls1//0ZWDrxsrAAXpJhmvBIkORIEorVeiy6R8a+WyAcr1W/QT4UL1Sd9yafwSKrHCoNPIT4I+e5y2qCaQ0OHWnphUUjgajVRXQAL2kb+oF84rHY0H8s4p/22ToHxKtIvqcNfUT1ehxkL9abmGXsX9E1e7Aw4Z+MqWwuKMhEIEVvZbWP4LRKtyEcqn9BOiyk+5ih5+lOSINRqs4eiU5QlVAT+s6eC2Ro/xGK0cF/EJ43+IVKTaTBvqacYubSj5CLxujLY8aH3LIJYvNMji57/FoMIgYiVgmCc2sgQB6auO4qdZl6NQMAbnR1Lt3uZ9oJtUU8kjiEJtWZKXklFFSBXs04g+yY8/KFxBlunWWvi+hX4kBlN4ZkgQwdWi1LVIbZN3ivvIp+j1JEjXyl8pHNf5vei3lqVR2UhS5bscy6xP5L87ckL/U/2v8xDe6VgAAAABJRU5ErkJggg==" alt="accessibility2">
                     </div>
-                    <h3 class="mb-2 text-xl font-bold dark:text-white">Accessibilité et Sécurité</h3>
+                    <h3 class="mb-2 text-xl font-bold dark:text-white">                Accessibility and Security</h3>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Interface Intuitive : </span>
-                        Profitez d’une interface utilisateur simple et épurée, accessible sur tous vos appareils.
+                        <span class="font-bold">Intuitive Interface: </span>
+                        Enjoy a simple, clean user interface that can be accessed on all your devices.
                     </p>
                     <p class="text-gray-500 dark:text-gray-400">
-                        <span class="font-bold">Gestion des Permissions : </span>
-                        Contrôlez les niveaux d'accès de chaque utilisateur pour garantir la sécurité des données.
+                        <span class="font-bold">Permissions Management: </span>
+                        Control the access levels of each user to ensure data security.
                     </p>
                 </div>
             </div>
@@ -136,9 +143,9 @@
     <section id="team" class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-4 lg:px-6 ">
             <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Equipe dev</h2>
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Dev Team</h2>
                 <p class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-                    Ici nous avons :
+                    Here we have :
                 </p>
             </div>
             <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
@@ -153,7 +160,7 @@
                         </h3>
                         <span class="text-gray-500 dark:text-gray-400">FullStack Web & Mobile developer</span>
                         <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            Développeur passionné, spécialisé en développement web, mobile, technologies backend et conception logicielle, en quête de nouveaux défis.
+                            Passionate developer, specialized in web development, mobile, backend technologies and software design, looking for new challenges.
                         </p>
                         <ul class="flex space-x-4 sm:mt-0">
                             <li>
@@ -185,7 +192,7 @@
                         </h3>
                         <span class="text-gray-500 dark:text-gray-400">FullStack developer</span>
                         <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                           Developpeur web, passionné du domaine de d'informatique et du droit. En formation actuellement en troisième année à l'IFRI.
+                            Web developer, passionate about the field of computer science and law. Currently in training in the third year at IFRI.
                         </p>
                         <ul class="flex space-x-4 sm:mt-0">
                             <li>
@@ -210,7 +217,7 @@
             <div class="flex items-center justify-between">
                 <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                     <x-application-logo class="w-10 h-10 fill-current text-gray-500" />
-                    <span class="hidden md:flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Teamsync</span>
+                    <span translate="no" class="hidden md:flex self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Teamsync</span>
                 </a>
                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
@@ -228,7 +235,7 @@
                 </ul>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span class="block text-sm text-gray-500 text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Teamsync™</a>. Tous droits réservés.</span>
+            <span class="block text-sm text-gray-500 text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline" translate="no">Teamsync™</a>. All rights reserved.</span>
         </div>
     </footer>
 
@@ -266,7 +273,7 @@
 
                     <!-- Password -->
                     <div class="mt-4">
-                        <x-input-label for="password" :value="__('Mot de passe')" />
+                        <x-input-label for="password" :value="__('Password')" />
 
                         <x-text-input id="password" class="block mt-1 w-full"
                                       type="password"
@@ -280,7 +287,7 @@
                     <div class="block mt-4">
                         <label for="remember_me" class="inline-flex items-center">
                             <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-                            <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Se rappeller de moi') }}</span>
+                            <span class="ms-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                         </label>
                     </div>
 
@@ -292,7 +299,7 @@
                         @endif
 
                         <x-primary-button class="ms-3">
-                            {{ __('Log in') }}
+                            {{ __('Sign in') }}
                         </x-primary-button>
                     </div>
                 </form>
@@ -323,7 +330,7 @@
 
                     <!-- Name -->
                     <div>
-                        <x-input-label for="name" :value="__('Nom')" />
+                        <x-input-label for="name" :value="__('Full Name')" />
                         <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
@@ -337,7 +344,7 @@
 
                     <!-- Password -->
                     <div class="mt-4">
-                        <x-input-label for="password" :value="__('Mot de passe')" />
+                        <x-input-label for="password" :value="__('Password')" />
 
                         <x-text-input id="password" class="block mt-1 w-full"
                                       type="password"
@@ -349,7 +356,7 @@
 
                     <!-- Confirm Password -->
                     <div class="mt-4">
-                        <x-input-label for="password_confirmation" :value="__('Confirmer le  mot de passe')" />
+                        <x-input-label for="password_confirmation" :value="__('Repeat Password')" />
 
                         <x-text-input id="password_confirmation" class="block mt-1 w-full"
                                       type="password"
@@ -360,11 +367,11 @@
 
                     <div class="flex items-center justify-end mt-4">
                         <button type="button" data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" data-modal-hide="authentication-signup-modal"  class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                            {{ __('Déja inscrit?') }}
+                            {{ __('Already registered?') }}
                         </button>
 
                         <x-primary-button class="ms-4">
-                            {{ __("S'inscrire") }}
+                            {{ __("Sign up") }}
                         </x-primary-button>
                     </div>
                 </form>
@@ -392,7 +399,7 @@
             <!-- Modal body -->
             <div class="p-4 md:p-5">
                 <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-                    {{ __("Vous avez oublié votre mot de passe ? Aucun problème. Indiquez-nous simplement votre adresse e-mail et nous vous enverrons par e-mail un lien de réinitialisation de mot de passe qui vous permettra d'en choisir un nouveau.") }}
+                    {{ __("Forgot your password? No problem. Simply provide us with your email address and we'll email you a password reset link that will allow you to choose a new one.") }}
                 </div>
 
                 <!-- Session Status -->
