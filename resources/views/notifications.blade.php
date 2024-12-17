@@ -1,13 +1,14 @@
 
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="hidden md:flex font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="items-center justify-between flex font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <img class="w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADMklEQVR4nOWaTWvUUBSGL4hWBUXFhbWZnDdpbKULu6hfS3UhKrgUlyIIiiiI6F9QN7qxuHZREKRUV/6CIi4qSp0256ZqoX7Uj1ZaS1Faa+SkM1jbpp2Oc29m9IUXZpKb5Dw599yb3BmlDGmgsTHHQKcm+ipmoCsEmlUtaaCxMaeBUQ3E8zwaBYGjakUsmVgIMWui+6pWpKU7pYAw0bj6R0DGVK2Iga5UEKBTVauGHGedBq5oohvyXUantGLv8/0d0kbayjFyrKoGaaBVA2Hhbv8IfX+3bJfRSQpbaiIx0FmEYM/bI20LcHJsa6YQ7LqHGJicd9dHJNC0Y7Tn7Z2fLTlHSHTQbvTFgIDWRSCKQ+w0E93VwL539fXrxRHR/mQb0XRK7Uyy5+2yCjFItJaB/tS5okwz0C/ntgaigauVhpgzPF+2AtHT1raaiT4ZBPko1zAOEnnecVMQ+neNHTMOooF20yBMdNs4CBM9MQ4CPLYB8sF41wLe2wD5biEj34xC5Fta1ljIRiw2OnLlHWeLLZBBok3GQF75vmsLRDtOgzGQyHVbbIEw0U5jIEx01BZIBBw2CXLJWtcCLhoD0cAdiyDtxkAYyFuskedGIJJXV3vZiBn4GeZy22u9PmIjdRIrtYqBlxmAvJZrVwwkIjqdAURc8KmKQMgMq4EvGYKM9Ltu/d9lIgg2MvAsQ4i44J6wuXlDeZlwXV8TvagCiDgxUS+7rrciiJDogKQ08+CxAOazxFYSBAMnNdFU5kEjFWaKPe9EKSBvMw8WS5uJ3iwPQjReAyBjpWTkXtaB6uXdsSyIPN9oIl0FwcaLmojzRNtUKZLVcw3cSl1tz6I7IYnlpsSmypoQPe+MJnqogeEMAIY18EBikFhUpdQHEBMdCYnOaeC69FUNPNJAt0yeTDRUeJxJzMDMnDs688c+aTs74XYXztHBwDUNnJVryLUqFvh/K+26Pjc1be113c3iKAjqivvkc3G7tJG2qlqliSZKLt5q/uMAr2Cl3sqKe7mSV9MVZOS8qlZFQVBXyvsLA09lQVxVs7TjNCwFIxBGVkeUASU/P3jeBamDZAAgmpDP0p1MZeIXP3px2qvbFRcAAAAASUVORK5CYII=" alt="appointment-reminders--v1">
             {{ __('My Notifications') }}
         </h2>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="max-w-7xl min-h-screen mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white min-h-screen dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="w-full gap-4 p-6  text-gray-900 dark:text-gray-100">
                     @if($notifications->isEmpty())
                         <p class="text-center text-black"> < Aucune notification à afficher /> </p>

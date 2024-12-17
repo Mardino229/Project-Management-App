@@ -1,40 +1,42 @@
 
 <x-app-layout>
     <x-slot name="header">
-            <h2 class="hidden md:flex font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('My projects') }}
-            </h2>
-{{--            <div class="flex gap-2 justify-end">--}}
-{{--                <a href=""><x-primary-button>{{ __('New Project') }}</x-primary-button></a>--}}
-{{--            </div>--}}
-            <div class="flex items-center gap-2 justify-end">
-                <button type="button" data-popover-target="search">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256">
-                        <g fill="#1f2937" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M19,3c-5.51172,0 -10,4.48828 -10,10c0,2.39453 0.83984,4.58984 2.25,6.3125l-7.96875,7.96875l1.4375,1.4375l7.96875,-7.96875c1.72266,1.41016 3.91797,2.25 6.3125,2.25c5.51172,0 10,-4.48828 10,-10c0,-5.51172 -4.48828,-10 -10,-10zM19,5c4.42969,0 8,3.57031 8,8c0,4.42969 -3.57031,8 -8,8c-4.42969,0 -8,-3.57031 -8,-8c0,-4.42969 3.57031,-8 8,-8z"></path></g></g>
-                    </svg>
-                </button>
-                <button type="button" class="inline-flex items-center px-2 py-1 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150"
-                        data-popover-target="sort" >
-                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20V10m0 10-3-3m3 3 3-3m5-13v10m0-10 3 3m-3-3-3 3"/>
-                    </svg>
-                </button>
-                <button type="button" class="inline-flex items-center px-2 py-1 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150"
-                        data-popover-target="filter" >
-                    <svg class="w-5 h-5 md:w-6 md:h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z"/>
-                    </svg>
-                </button>
-                <button data-modal-target="project-modal" data-modal-toggle="project-modal"
-                        class="inline-flex items-center px-3 py-1.5  md:px-4 md:py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold md:text-xs text-xxs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150" >
-                    New Project
-                </button>
+            <div class="flex justify-between">
+                <div class="items-center flex">
+                    <img class="md:w-8 md:h-8 w-7 h-7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoklEQVR4nO2VPUsDQRCG18LOQkUsJHfz3hVBYpEiCFaCgqD+F4lYp/Sj00bwDwj+AkWwEPyIIqkkIbNREbX2A2OjKJE9NhhDclm5jbHwha32ZZ6Znd0dIf5lKCY6ZSArflsSqKhlK9hxNaD1RXTYETATHTQF5xOJHm18sHGC567bZ9SSouMM6exubICvfN81AjPRcAAG8jbAF44zYgb2vFENPrEBLhGNmVY8rW/grg2wJJo16zGQ1sZ1G2AmmjerGNjQxjkr4K94lVCjBPaVqeR5UzbA1Xih4Fwq1c3AozKpZxUVWhsvFFwkmtAX6ywq9Fu8VmAJbOrPY8EGmIGtlmBWHwfRqwTu87FYf1SoBJKS6C0UfE3UK4Fc0FsgHRV66fuDDBTqh4RokN1R20ZhGJiJ9joCrhcT3bVhFt+agGdswhVUzQARRRLIVN96RYiuIFEgqyEZ0Q5xPD7ARE9BFa47WZPMuE7mWd1o62AJrOlZvd1gb0dXvWobusLAOwMf6nNosJ9Ue9qzbBP8oo+z3NRDVG7lET8VA0sqIAOLUTx/Qp8+hx1agvXj4wAAAABJRU5ErkJggg==" alt="flipboard">
+                    <h2 class="items-center hidden md:flex  font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                        {{ __('My projects') }}
+                    </h2>
+                </div>
+                <div class="flex items-center gap-2 justify-end">
+                    <button type="button" data-popover-target="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256">
+                            <g fill="#1f2937" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8,8)"><path d="M19,3c-5.51172,0 -10,4.48828 -10,10c0,2.39453 0.83984,4.58984 2.25,6.3125l-7.96875,7.96875l1.4375,1.4375l7.96875,-7.96875c1.72266,1.41016 3.91797,2.25 6.3125,2.25c5.51172,0 10,-4.48828 10,-10c0,-5.51172 -4.48828,-10 -10,-10zM19,5c4.42969,0 8,3.57031 8,8c0,4.42969 -3.57031,8 -8,8c-4.42969,0 -8,-3.57031 -8,-8c0,-4.42969 3.57031,-8 8,-8z"></path></g></g>
+                        </svg>
+                    </button>
+                    <button type="button" class="inline-flex items-center px-2 py-1 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150"
+                            data-popover-target="sort" >
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 20V10m0 10-3-3m3 3 3-3m5-13v10m0-10 3 3m-3-3-3 3"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="inline-flex items-center px-2 py-1 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150"
+                            data-popover-target="filter" >
+                        <svg class="w-5 h-5 md:w-6 md:h-6 text-white-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M18.796 4H5.204a1 1 0 0 0-.753 1.659l5.302 6.058a1 1 0 0 1 .247.659v4.874a.5.5 0 0 0 .2.4l3 2.25a.5.5 0 0 0 .8-.4v-7.124a1 1 0 0 1 .247-.659l5.302-6.059c.566-.646.106-1.658-.753-1.658Z"/>
+                        </svg>
+                    </button>
+                    <button data-modal-target="project-modal" data-modal-toggle="project-modal"
+                            class="inline-flex items-center px-3 py-1.5  md:px-4 md:py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold md:text-xs text-xxs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150" >
+                        New Project
+                    </button>
+                </div>
             </div>
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl min-h-full mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="max-w-7xl min-h-screen mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white min-h-screen dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
                 <div class="md:p-6 text-gray-900 dark:text-gray-100">
 
@@ -42,8 +44,8 @@
                         <p class="text-center font-bold text-gray-600">Result found for "{{$name}}"</p>
                     @endif
 
-                    <div class="relative overflow-x-auto">
-                        <div class="w-full">
+                    <div class="relative  overflow-x-auto">
+                        <div class="w-full n">
                             @if($projects->isEmpty())
                                 @if(!(isset($alert)))
                                     <p class="text-center text-gray-600">< Aucun résultat trouvé /></p>
@@ -146,8 +148,8 @@
 <div id="project-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="flex items-center bg-gray-700 justify-between px-4 md:px-5 py-2 md:py-2.5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-white dark:text-white">
                     New Project
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="project-modal">
@@ -172,7 +174,7 @@
                                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                             </svg>
                         </div>
-                        <input datepicker id="default-datepicker" required name="deadline" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                        <input datepicker datepicker-autohide id="default-datepicker" required name="deadline" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
                     </div>
                     <x-input-error :messages="__('')" class="mt-2" />
 
@@ -226,8 +228,8 @@
     <div class="relative p-4 w-full max-w-2xl max-h-full">
 
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+            <div class="flex items-center bg-gray-700 justify-between px-4 md:px-5 py-2 md:py-2.5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-white dark:text-white">
                     New Task
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="{{$project->description.$project->title}}">
@@ -279,9 +281,9 @@
 <div id="{{$project->deadline.$project->title}}" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="relative p-4 w-full max-w-2xl max-h-full">
         <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Editing of Project
+            <div class="flex items-center bg-gray-700 justify-between px-4 md:px-5 py-2 md:py-2.5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-white dark:text-white">
+                    Project Editing
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="{{$project->deadline.$project->title}}">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
@@ -305,7 +307,7 @@
                                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
                             </svg>
                         </div>
-                        <input datepicker id="{{$project}}datepicker-autohide" required  name="deadline" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                        <input datepicker datepicker-autohide id="{{$project}}datepicker-autohide" required  name="deadline" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
                     </div>
 
                     <x-input-error :messages="__('')" class="mt-2" />
@@ -398,8 +400,8 @@
 
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
 
-                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    <div class="flex items-center bg-gray-700 justify-between px-4 md:px-5 py-2 md:py-2.5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-white dark:text-white">
                             Delegation
                         </h3>
                         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="{{$project->title.$task->title}}">
@@ -432,8 +434,8 @@
             <div class="relative p-4 w-full max-w-2xl max-h-full">
 
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    <div class="flex items-center bg-gray-700 justify-between px-4 md:px-5 py-2 md:py-2.5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-white dark:text-white">
                             Task Editing
                         </h3>
                         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="{{$task->title.$project->title.$task->description}}">

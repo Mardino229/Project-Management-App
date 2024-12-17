@@ -2,9 +2,12 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between mb-1">
-            <h2 class="hidden md:flex font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                {{ __('My Tasks') }}
-            </h2>
+            <div class="items-center flex">
+                <img class="md:w-10 md:h-10 w-9 h-9" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAU0lEQVR4nO2UwQkAMAgDM0r33+imaRco+JJIm4M8/B0GlUKYCGvtWyKgYkNV3hFoB7dAwF0B0wVwnyFugXZwCwTcFTBFQMXcfoZyC+CugPyB8AMHOiyJsGkcPdgAAAAASUVORK5CYII=" alt="checklist">
+                <h2 class="items-center hidden md:flex  font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                    {{ __('My Tasks') }}
+                </h2>
+            </div>
             <div class="flex w-full md:w-auto items-center gap-2 justify-end">
                 <button type="button" data-popover-target="search" >
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0,0,256,256">
@@ -46,8 +49,8 @@
         </div>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="max-w-7xl min-h-screen mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white min-h-screen dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="w-full gap-4 md:p-6 p-1  text-gray-900 dark:text-gray-100">
                     @if(isset($name))
                         <p class="text-center font-bold text-gray-600 mb-2">Result found for "{{$name}}"</p>

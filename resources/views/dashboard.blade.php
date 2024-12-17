@@ -1,13 +1,14 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="font-semibold justify-between  items-center flex text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            <img class="md:w-10 md:h-10 w-8 h-8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAsUlEQVR4nO2YQQoDMQhFc5KY4zT0/qDbae/R0sVA203IkGibeQ+yjPL5omJKAAA/ieV81VLuVsqj56nITUXq7HhNXh97k70l3WbHa3I02f5mx2uCgC9woBdKaLUS0n9voypSj4hQkU1FLuEC3DEEBGM4ELyNGm10sUFmCDibAzp4d4kQUEfuLsyVaHAgGv85kAdf5mijZxtkhoBPcKAXSmi1NqrelzkdvI26X+YAAJIHT2AeUQlPhJ8IAAAAAElFTkSuQmCC" alt="dashboard-layout">
+            {{ __('My Dashboard') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="max-w-7xl mx-auto min-h-screen sm:px-6 lg:px-8">
+            <div class="bg-white min-h-screen dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-2 text-gray-900 dark:text-gray-100">
                     <div class="w-full">
                         <div class="block w-full mb-2 p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
@@ -52,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block w-full  p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+                        <div class="block w-full min-h-screen p-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
                             <h5 class=" md:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
                             <p class="font-normal mb-2 text-gray-700 dark:text-gray-400">Global view of projects</p>
                             @if(empty($projectsDetails))
@@ -61,7 +62,7 @@
                             <div class="flex flex-col gap-2">
                                 @foreach($projectsDetails as $details)
                                     <div class="flex md:flex-nowrap flex-wrap">
-                                        <div class="w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6">
+                                        <div class="w-full bg-white rounded-lg shadow dark:bg-gray-800 p-1 md:p-3">
                                             <div class="flex justify-between mb-3">
                                                 <div class="flex items-center">
                                                     <div class="flex justify-center items-center">

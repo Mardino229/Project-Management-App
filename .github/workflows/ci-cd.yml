@@ -32,12 +32,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd ~/Project-Management-App
-          composer install
           cp .env.example .env
-          php artisan key:generate
-          php artisan db:seed
           php artisan cache:clear
-          php artisan migrate
-          npm install
           npm run build
 
