@@ -18,9 +18,9 @@ class DashboardController extends Controller
         {
             $tasks = $project->tasks;
 
-            $non_commence = $tasks->where('status','non_commencé')->count();
-            $en_cours = $tasks->where('status','en_cours')->count();
-            $termine = $tasks->where('status','terminé')->count();
+            $non_commence = $tasks->where('status','not started')->count();
+            $en_cours = $tasks->where('status','in progress')->count();
+            $termine = $tasks->where('status','completed')->count();
 
             $deadline = Carbon::parse($project->deadline);
             $today = Carbon::today();
@@ -41,9 +41,9 @@ class DashboardController extends Controller
 //            $completed = $completed + $termine;
 
         }
-        $not_started = Task::all()->where('user_id', Auth::id())->where('status','non_commencé')->count();
-        $in_progress = Task::all()->where('user_id', Auth::id())->where('status','en_cours')->count();
-        $completed = Task::all()->where('user_id', Auth::id())->where('status','terminé')->count();
+        $not_started = Task::all()->where('user_id', Auth::id())->where('status','not started')->count();
+        $in_progress = Task::all()->where('user_id', Auth::id())->where('status','in progress')->count();
+        $completed = Task::all()->where('user_id', Auth::id())->where('status','completed')->count();
         $total = $not_started + $in_progress + $completed;
 
         $user = User::find(Auth::id());

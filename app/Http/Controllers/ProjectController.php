@@ -25,7 +25,7 @@ class ProjectController extends Controller
     }
     public function in_progress()
     {
-        $projects= Project::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', "in_progress");
+        $projects= Project::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', "in progress");
 
         return view('projectmanagement',compact('projects'));
     }
@@ -63,7 +63,7 @@ class ProjectController extends Controller
 
         Project::create($request->all());
 
-        return redirect()->back()->with('success','Projet crée avec succès.');
+        return redirect()->back()->with('success','Project created successfully.');
     }
 
     public function update(Request $request,Project $project)
@@ -80,21 +80,21 @@ class ProjectController extends Controller
 
         $project->update($request->all());
 
-        return redirect()->back()->with('success','Projet modifié avec succès');
+        return redirect()->back()->with('success','Project updated successfully.');
     }
 
     public function completed (Project $project)
     {
         foreach ($project->tasks as $task) {
             if ($task->status !== 'terminé') {
-                return redirect()->back()->with('error','Toutes les tâches de ce projet ne sont pas terminées.');
+                return redirect()->back()->with('error','Not all tasks in this project are complete.');
             }
         }
 
         $project->status = "completed";
         $project->save();
 
-        return redirect()->back()->with('success','Projet terminé avec succès');
+        return redirect()->back()->with('success','Project successfully completed');
     }
 
     public function destroy(Project $project)
@@ -105,6 +105,6 @@ class ProjectController extends Controller
 
         $project->delete();
 
-        return redirect()->back()->with('success','Projet supprimé avec succès');
+        return redirect()->back()->with('success','Project successfully deleted');
     }
 }

@@ -57,7 +57,8 @@
                             <h5 class=" md:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white">Projects Statistics</h5>
                             <p class="font-normal mb-2 text-gray-700 dark:text-gray-400">Global view of projects</p>
                             @if(empty($projectsDetails))
-                                <p class="text-center text-black"> < Aucun projet à votre actif /> </p>
+                                <img class="mx-auto mt-16" width="100" height="100" src="https://img.icons8.com/ios/50/nothing-found.png" alt="nothing-found"/>
+                                <p class="text-center text-black"> < No projects under your belt /> </p>
                             @endif
                             <div class="flex flex-col gap-2">
                                 @foreach($projectsDetails as $details)
@@ -143,7 +144,7 @@
                     </svg>
                 </button>
                 <p class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Vous avez une nouvelle notification.
+                    You have a new notification.
                     <a href="{{route("notification")}}" class="text-blue-600">Cliquez ici pour voir  </a>
                 </p>
             </div>

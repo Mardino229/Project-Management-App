@@ -63,4 +63,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/forbidden', function () {
+    abort(403, 'Unauthorized action.');
+});
+
 require __DIR__.'/auth.php';

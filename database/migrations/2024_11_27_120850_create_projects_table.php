@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->date('deadline');
-            $table->enum('status', ['in_progress', 'completed'])->default('in_progress');
+            $table->enum('status', ['in progress', 'completed'])->default('in progress');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

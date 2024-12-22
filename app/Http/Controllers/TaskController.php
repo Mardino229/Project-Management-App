@@ -30,11 +30,26 @@ class TaskController extends Controller
     }
 
     public function priority() {
-        $tasks = Task::orderByRaw("FIELD(priority, 'high', 'medium', 'low')")->get()->where('user_id', Auth::id());
+        $tasks = Task::orderByRaw("
+            CASE
+                WHEN priority = 'high' THEN 1
+                WHEN priority = 'medium' THEN 2
+                WHEN priority = 'low' THEN 3
+                ELSE 4
+            END
+        ")->where('user_id', Auth::id())->get();
+
         return view('task.all', compact('tasks'));
     }
     public function status() {
-        $tasks = Task::orderByRaw("FIELD(status, 'non_commencé', 'en_cours', 'terminé')")->get()->where('user_id', Auth::id());
+        $tasks = Task::orderByRaw("
+            CASE
+                WHEN status = 'not started' THEN 1
+                WHEN status = 'in progress' THEN 2
+                WHEN status = 'completed' THEN 3
+                ELSE 4
+            END
+        ")->where('user_id', Auth::id())->get();
         return view('task.all', compact('tasks'));
     }
 
@@ -48,7 +63,7 @@ class TaskController extends Controller
 
     public function not_stated()
     {
-        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'non_commencé');
+        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'not started');
         $user = User::find(Auth::id());
         $alert = false;
         foreach ($user->notification as $notification){
@@ -63,7 +78,7 @@ class TaskController extends Controller
 
     public function in_progress()
     {
-        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'en_cours');
+        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'in progress');
         $user = User::find(Auth::id());
         $alert = false;
         foreach ($user->notification as $notification){
@@ -77,7 +92,7 @@ class TaskController extends Controller
 
     public function completed()
     {
-        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'terminé');
+        $tasks = Task::orderBy('created_at', 'desc')->get()->where('user_id', Auth::id())->where('status', 'completed');
         $user = User::find(Auth::id());
         $alert = false;
         foreach ($user->notification as $notification){
@@ -92,17 +107,17 @@ class TaskController extends Controller
     public function setStatus(Task $task, string $status ) {
         $task->status =$status;
         $task->save();
-        return redirect()->back()->with('success','Le statut de la tâche a été mis à jour avec succès.');
+        return redirect()->back()->with('success','The status of the task has been updated successfully.');
     }
 
     public function sendEmail($username, $name, $title, $mail)
     {
-        $details = [ 'title' => 'Une nouvelle tâche vous a été assignée',
-            'body' => "Hello, $username une nouvelle tâche vous a été assigné sur le projet ".
-                $title." par ".$name.". Veuillez consulter votre liste de tâche. "
+        $details = [ 'title' => 'You have been assigned a new task',
+            'body' => "Hello, $username a new task has been assigned to you on the ".
+                $title." project by ".$name.". Please review your to-do list."
         ];
         Mail::to($mail)->send(new NotificationMail($details));
-        return 'Email envoyé avec succès';
+        return 'Email sent successfully';
     }
     public function delegate(Request $request, Task $task) {
         $request->validate([ 'email' => 'required|email|exists:users,email', ]);
@@ -114,14 +129,14 @@ class TaskController extends Controller
             'user_id' =>$user->id,
             'task_id' =>$task->id,
             'message' =>
-                "Hello $user->name une nouvelle tâche vous a été assigné sur le projet ".
-                $task->project->title." par ".$task->project->user->name." . Veuillez consulter votre liste de tâche",
+                "Hello $user->name You have been assigned a new task on the project ".
+                $task->project->title." par ".$task->project->user->name." . Please review your to-do list",
             'is_read' =>false,
         ]);
 
         $this->sendEmail($user->name, $task->project->user->name, $task->project->title,$request->input('email'));
 
-        return redirect()->back()->with('success','Tâche déléguée à '.$user->name.' avec succès.');
+        return redirect()->back()->with('success','Task successfully delegated to'.$user->name);
     }
 
     public function store(Request $request, int $id)
@@ -139,7 +154,7 @@ class TaskController extends Controller
         $task = Task::create($request->all());
         $project = Project::find($id);
         if ($project->status = "completed") {
-            $project->status = "in_progress";
+            $project->status = "in progress";
             $project->save();
         }
         return redirect()->back()->with('success','Task created and added to project '.$task->project->title .' with success');
@@ -154,13 +169,13 @@ class TaskController extends Controller
 
         $task->update($request->all());
 
-        return redirect()->back()->with('success', 'Tâche modifiée avec succès.');
+        return redirect()->back()->with('success', 'Task successfully modified.');
     }
 
     public function delete(Task $task)
     {
         $task->delete();
 
-        return redirect()->back()->with('success','Tâche supprimée avec succès');
+        return redirect()->back()->with('success','Task Deleted Successfully');
     }
 }

@@ -48,38 +48,39 @@
                         <div class="w-full n">
                             @if($projects->isEmpty())
                                 @if(!(isset($alert)))
-                                    <p class="text-center text-gray-600">< Aucun résultat trouvé /></p>
+                                    <img class="mx-auto mt-64" width="100" height="100" src="https://img.icons8.com/ios/50/nothing-found.png" alt="nothing-found"/>
+                                    <p class="text-center text-gray-600">< No results found /></p>
                                 @else
-                                    <p class="text-center text-black"> < Aucun projet à votre actif /> </p>
+                                    <img class="mx-auto mt-64" width="100" height="100" src="https://img.icons8.com/ios/50/nothing-found.png" alt="nothing-found"/>
+                                    <p class="text-center text-black"> < No projects under your belt /> </p>
                                 @endif
                             @endif
                             @foreach($projects as $project)
                                 <div class="bg-gray-50 w-full mt-2">
-                                    <div class="flex justify-end p-2">
+                                    <div class="flex justify-end p-2 items-center gap-1">
+                                        <span class="inline-block px-1 py-1 text-sm font-medium text-white bg-gray-800 rounded-full">
+                                            {{$project->status}}
+                                        </span>
                                         <button class="flex" data-modal-target="{{$project->description}}info-modal" data-modal-toggle="{{$project->description}}info-modal" type="button">
                                             <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11h2v5m-2 0h4m-2.592-8.5h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-                                            </svg> Project's details
+                                            </svg> Details
                                         </button>
                                     </div>
-                                    <button type="button" data-drawer-target="{{$project->description}}" data-drawer-show="{{$project->description}}"  aria-controls="{{$project->description}}" class="inline-flex w-full items-center justify-center p-5 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
-                                        <img class="w-10 y-10" src="https://img.icons8.com/color/96/project-management.png" alt="project-management"/>
-                                        <span class="w-full">{{$project->title}}</span>
-                                        <span class="inline-block px-3 py-1 text-sm font-medium text-white bg-gray-800 rounded-full">
-                                            {{$project->status}}
-                                        </span>
+                                    <button type="button" data-drawer-target="{{$project->description}}" data-drawer-show="{{$project->description}}"  aria-controls="{{$project->description}}" class="inline-flex w-full items-center justify-between p-1 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
+                                        <span class="my-2 px-1">{{$project->title}}</span>
                                         <svg class="w-4 h-4 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                                         </svg>
                                     </button>
                                     <div class="inline-flex w-full items-center justify-center rounded-md shadow-sm" role="group">
-                                        <button type="button" data-modal-target="{{$project->deadline.$project->title}}" data-modal-toggle="{{$project->deadline.$project->title}}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                                        <button type="button" data-modal-target="{{$project->deadline.$project->title}}" data-modal-toggle="{{$project->deadline.$project->title}}" class="inline-flex items-center px-2 py-1 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
                                             <span class="block pr-2">Edit</span>
                                             <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"/>
                                             </svg>
                                         </button>
-                                        <button type="button" data-modal-target="{{$project->description}}popup-modal" data-modal-toggle="{{$project->description}}popup-modal" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                                        <button type="button" data-modal-target="{{$project->description}}popup-modal" data-modal-toggle="{{$project->description}}popup-modal" class="inline-flex items-center px-2 py-1 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
                                             <span class="block pr-2">Delete</span>
                                             <svg class="w-4 h-4 text-red-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15v3c0 .5523.44772 1 1 1h16c.5523 0 1-.4477 1-1v-3M3 15V6c0-.55228.44772-1 1-1h16c.5523 0 1 .44772 1 1v9M3 15h18M8 15v4m4-4v4m4-4v4m-5.5061-7.4939L12 10m0 0 1.5061-1.50614M12 10l1.5061 1.5061M12 10l-1.5061-1.50614"/>
@@ -87,7 +88,7 @@
                                         </button>
                                         <form action="{{route("project-management.complete", $project)}}" method="post">
                                             @csrf
-                                            <button type="submit" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                                            <button type="submit" class="inline-flex items-center px-2 py-1 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
                                                 <span class="block pr-2">Complete</span>
                                                 <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
@@ -580,26 +581,26 @@
         </div>
     </div>
 @endif
-@if(isset($alert))
-    @if($alert)
-        <div id="toast-message-cta" tabindex="-1" aria-hidden="true" class="overflow-y-auto flex overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full rounded-lg " role="alert">
-            <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
-                    <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-dismiss-target="#toast-message-cta" aria-label="Close">
-                        <span class="sr-only">Close</span>
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                        </svg>
-                    </button>
-                    <p class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Vous avez une nouvelle notification.
-                        <a href="{{route("notification")}}" class="text-blue-600">Cliquez ici pour voir  </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    @endif
-@endif
+{{--@if(isset($alert))--}}
+{{--    @if($alert)--}}
+{{--        <div id="toast-message-cta" tabindex="-1" aria-hidden="true" class="overflow-y-auto flex overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full rounded-lg " role="alert">--}}
+{{--            <div class="relative p-4 w-full max-w-md h-full md:h-auto">--}}
+{{--                <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">--}}
+{{--                    <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-dismiss-target="#toast-message-cta" aria-label="Close">--}}
+{{--                        <span class="sr-only">Close</span>--}}
+{{--                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">--}}
+{{--                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>--}}
+{{--                        </svg>--}}
+{{--                    </button>--}}
+{{--                    <p class="text-lg font-semibold text-gray-900 dark:text-white">--}}
+{{--                        Vous avez une nouvelle notification.--}}
+{{--                        <a href="{{route("notification")}}" class="text-blue-600">Cliquez ici pour voir  </a>--}}
+{{--                    </p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    @endif--}}
+{{--@endif--}}
 
 @if ($errors->any())
     <div id="toast-message-cta" tabindex="-1" aria-hidden="true" class="overflow-y-auto flex overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full rounded-lg " role="alert">

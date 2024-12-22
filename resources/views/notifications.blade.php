@@ -11,7 +11,8 @@
             <div class="bg-white min-h-screen dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="w-full gap-4 p-6  text-gray-900 dark:text-gray-100">
                     @if($notifications->isEmpty())
-                        <p class="text-center text-black"> < Aucune notification à afficher /> </p>
+                        <img class="mx-auto mt-64" width="100" height="100" src="https://img.icons8.com/external-outline-andi-nur-abdillah/64/external-No-Notification-empty-state-(outline)-outline-andi-nur-abdillah.png" alt="external-No-Notification-empty-state-(outline)-outline-andi-nur-abdillah"/>
+                        <p class="text-center text-black"> < No notifications to display /> </p>
                     @endif
                     @foreach($notifications as $notification)
                             <div class="flex flex-wrap w-full mb-4 {{$notification->is_read ? "bg-gray-50 text-gray-800 dark:text-gray-400":"bg-blue-50 text-blue-800 dark:text-blue-400"}} ">

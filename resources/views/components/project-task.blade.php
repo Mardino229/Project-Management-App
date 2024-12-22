@@ -13,9 +13,9 @@
     <div class="justify-between gap-2 items-center mb-2 flex">
         <kbd class="px-2 py-1.5 text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">{{$project}}</kbd>
         <div>
-            @if($state=="en_cours")
+            @if($state=="in progress")
                 <span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">{{$state}}</span>
-            @elseif($state=="terminé")
+            @elseif($state=="completed")
                 <span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">{{$state}}</span>
             @else
                 <span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{{$state}}</span>
