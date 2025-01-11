@@ -33,6 +33,7 @@ jobs:
         script: |
           cd ~/Project-Management-App
           cp .env.example .env
+          chmod +x run.sh
           ./run.sh
           npm install
           npm run build
