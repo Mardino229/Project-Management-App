@@ -34,6 +34,7 @@ jobs:
           cd ~/Project-Management-App
           cp .env.example .env
           composer install
+          echo "Packages installed"
           php artisan key:generate
           php artisan db:seed
           php artisan cache:clear
