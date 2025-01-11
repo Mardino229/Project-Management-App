@@ -75,4 +75,4 @@ Plateforme de gestion de tâches collaboratives.
 4. Jouissez donc des fonctionnalités de l'application.
 ## Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails
