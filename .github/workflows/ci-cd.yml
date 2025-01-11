@@ -33,12 +33,7 @@ jobs:
         script: |
           cd ~/Project-Management-App
           cp .env.example .env
-          composer install --no-interaction --optimize-autoloader
-          echo "Packages installed"
-          php artisan key:generate --force
-          php artisan db:seed --force
-          php artisan cache:clear
-          php artisan migrate --force
+          ./run.sh
           npm install
           npm run build
 
